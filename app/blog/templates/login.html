@@ -1,0 +1,16 @@
+{% extends "base.html"%} {% block content%}
+{% include 'inc/form_errors.html'%}
+<form action="" method="post">
+  {{ form.csrf_token}} {{ form.email.label(class= "form-control-label")}}{{
+  form.email(class= "form-control")}} {{ form.password.label(class=
+  "form-control-label")}}{{ form.password(class= "form-control")}}
+  <div class="form-check">
+    {{ form.remember.label(class= "form-check-label",for="flexCheckDefault")}}{{
+    form.remember(class= "form-check-input",type="checkbox" ,
+    id="flexCheckDefault")}}
+  </div>
+
+  {{ form.submit(class= "btn btn-info mt-4")}}
+</form>
+
+{% endblock%}
